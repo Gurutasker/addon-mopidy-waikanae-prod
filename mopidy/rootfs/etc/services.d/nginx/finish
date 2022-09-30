@@ -1,4 +1,4 @@
-#!/command/with-contenv bashio
+#!/usr/bin/execlineb -S0
 # ==============================================================================
 # Home Assistant Community Add-on: Mopidy
 # Take down the S6 supervision tree when Nginx fails
