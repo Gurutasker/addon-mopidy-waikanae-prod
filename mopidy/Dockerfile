@@ -16,16 +16,9 @@
         \
         && apt-get install -y --no-install-recommends \
             dirmngr=2.2.12-1+deb10u1 \
-            gpg-agent=2.2.12-1+deb10u1 \
-            gpg=2.2.12-1+deb10u1 \
-            nginx=1.14.2-2+deb10u4 \
-            git=1:2.20.1-2+deb10u3 \
         \
         && curl -L https://apt.mopidy.com/mopidy.gpg | apt-key add - \
         && curl -L https://apt.mopidy.com/mopidy.list -o /etc/apt/sources.list.d/mopidy.list \
-        \
-        && curl https://bootstrap.pypa.io/get-pip.py | python3 \
-        && pip3 install --no-cache-dir -r /tmp/requirements.txt \
         \
         && find /usr/local/lib/python3.7/ -type d -name tests -depth -exec rm -rf {} \; \
         && find /usr/local/lib/python3.7/ -type d -name test -depth -exec rm -rf {} \; \
