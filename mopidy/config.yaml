@@ -17,7 +17,7 @@ audio: true
 ports:
   6600/tcp: 6600
   5555/udp: 5555
-  80/tcp: 80
+  80/tcp: 6680
 ports_description:
   6600/tcp: Mopidy
   5555/udp: Autoaudiosink
