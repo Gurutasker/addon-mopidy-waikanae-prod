@@ -24,14 +24,6 @@
         && curl -L https://apt.mopidy.com/mopidy.gpg | apt-key add - \
         && curl -L https://apt.mopidy.com/mopidy.list -o /etc/apt/sources.list.d/mopidy.list \
         \
-        && apt-get update \
-        \
-        && apt-get install -y --no-install-recommends \
-            build-essential=12.6 \
-            python3-dev=3.7.3-1 \
-            python3-gi=3.30.4-1 \
-            python3-gst-1.0=1.14.4-1+b1 \
-        \
         && curl https://bootstrap.pypa.io/get-pip.py | python3 \
         && pip3 install --no-cache-dir -r /tmp/requirements.txt \
         \
