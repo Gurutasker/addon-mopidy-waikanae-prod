@@ -1,4 +1,4 @@
-#!/command/with-contenv bashio
+#!/usr/bin/with-contenv bashio
 # ==============================================================================
 # Home Assistant Community Add-on: Mopidy
 # Install user configured/requested packages
