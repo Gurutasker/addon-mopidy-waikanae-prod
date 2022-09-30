@@ -64,7 +64,8 @@ RUN \
         /var/{cache,log}/* \
         /var/lib/apt/lists/* \
         /root/.cache \
-    && find /tmp/ -mindepth 1  -delete
+    && find /tmp/ -mindepth 1  -delete \
+    && echo "1" >> /IS_CONTAINER
 
 # Move access.log to stdout and error.log to stderr
 RUN mkdir -p /var/log/nginx && ln -sf /dev/stdout /var/log/nginx/access.log && ln -sf /dev/stderr /var/log/nginx/error.log
