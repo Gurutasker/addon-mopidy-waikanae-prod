@@ -1,12 +1,12 @@
-#!/command/with-contenv bashio
+#!/usr/bin/with-contenv bashio
 # ==============================================================================
 # Home Assistant Community Add-on: Mopidy
-# Runs the NGINX daemon
+# Runs the Nginx daemon
 # ==============================================================================
 declare -a options
 
 # Wait for Mopidy to become available
 bashio::net.wait_for 4478
 
-bashio::log.info "Starting NGINX..."
+bashio::log.info "Starting NGinx..."
 exec nginx "${options[@]}"
