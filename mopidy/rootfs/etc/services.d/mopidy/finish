@@ -1,11 +1,9 @@
-#!/command/with-contenv bashio
+#!/usr/bin/execlineb -S0
 # ==============================================================================
 # Home Assistant Community Add-on: Mopidy
 # Take down the S6 supervision tree when Mopidy fails
 # ==============================================================================
-if [[ "${1}" -ne 0 ]] && [[ "${1}" -ne 256 ]]; then
-  bashio::log.warning "Mopidy crashed, halting add-on"
-  /run/s6/basedir/bin/halt
-fi
+if -n { s6-test $# -ne 0 }
+if -n { s6-test ${1} -eq 256 }
 
-bashio::log.info "Mopidy stopped, restarting..."
+s6-svscanctl -t /var/run/s6/services
