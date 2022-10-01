@@ -24,7 +24,7 @@ map:
   - config
   - share:rw
   - ssl
-  - media
+  - media:rw
 options:
   system_packages: []
   python_packages: []
