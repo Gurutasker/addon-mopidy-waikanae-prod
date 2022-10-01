@@ -20,7 +20,7 @@ RUN \
         gpg=2.2.12-1+deb10u2 \
         gnupg=2.2.12-1+deb10u2\
         nginx=1.14.2-2+deb10u4 \
-        git=1:2.20.1-2+deb10u3 \
+        git=1:2.20.1-2+deb10u3
 
 COPY mopidy.list /etc/apt/sources.list.d/
 
