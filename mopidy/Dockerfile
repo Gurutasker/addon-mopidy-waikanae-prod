@@ -9,7 +9,6 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Copy Python requirements file
 COPY requirements.txt /tmp/
-COPY mopidy.list /etc/apt/sources.list.d/
 
 # Setup base
 RUN \
@@ -22,8 +21,11 @@ RUN \
         gnupg=2.2.12-1+deb10u2\
         nginx=1.14.2-2+deb10u4 \
         git=1:2.20.1-2+deb10u3 \
-    \
-    && curl -L https://apt.mopidy.com/mopidy.gpg | apt-key add - \
+
+COPY mopidy.list /etc/apt/sources.list.d/
+
+RUN \
+    curl -L https://apt.mopidy.com/mopidy.gpg | apt-key add - \
     \
     && apt-get update \
     \
