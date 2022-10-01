@@ -82,7 +82,9 @@ RUN mkdir -p /var/log/nginx && ln -sf /dev/stdout /var/log/nginx/access.log && l
 # Copy root filesystem
 COPY rootfs /
 
-VOLUME Music:/share/media/mopidy/music
+RUN --mount source=Music,target=/share/media/mopidy/music
+
+# VOLUME Music:/share/media/mopidy/music
 
 # Build arguments
 ARG BUILD_ARCH
