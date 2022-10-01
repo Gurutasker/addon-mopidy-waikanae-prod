@@ -82,7 +82,9 @@ RUN mkdir -p /var/log/nginx && ln -sf /dev/stdout /var/log/nginx/access.log && l
 # Copy root filesystem
 COPY rootfs /
 
-COPY mopidy-iris /usr/local/lib/python3.7/dist-packages/mopidy-iris/
+COPY mopidy-iris /usr/local/lib/python3.7/dist-packages/mopidy_iris/
+
+RUN chmod 777 /usr/local/lib/python3.7/dist-packages/mopidy_iris/*
 
 # Build arguments
 ARG BUILD_ARCH
