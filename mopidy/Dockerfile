@@ -19,7 +19,7 @@ RUN \
         dirmngr=2.2.12-1+deb10u2 \
         gpg-agent=2.2.12-1+deb10u2 \
         gpg=2.2.12-1+deb10u2 \
-        gnupug=2.2.12-1+deb10u2\
+        gnupg=2.2.12-1+deb10u2\
         nginx=1.14.2-2+deb10u4 \
         git=1:2.20.1-2+deb10u3 \
     \
