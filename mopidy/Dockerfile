@@ -42,10 +42,10 @@ RUN \
         python3-gi=3.30.4-1 \
         python3-gst-1.0=1.14.4-1+b1 \
         gstreamer1.0-alsa=1.14.4-2+deb10u1 \
-        gstreamer1.0-plugins-bad=1.14.4-1+deb10u2 \
-        gstreamer1.0-plugins-good=1.14.4-1+deb10u1 \
-        gstreamer1.0-plugins-ugly=1.14.4-1+deb10u1 \
-        gstreamer1.0-pulseaudio=1.14.4-1+deb10u1 \
+        gstreamer1.0-plugins-bad=1.14.4-1+deb10u3 \
+        gstreamer1.0-plugins-good=1.14.4-1+deb10u3 \
+        gstreamer1.0-plugins-ugly=1.14.4-1+deb10u2 \
+        gstreamer1.0-pulseaudio=1.14.4-1+deb10u3 \
     \
     && curl https://bootstrap.pypa.io/get-pip.py | python3 \
     && pip3 install --no-cache-dir -r /tmp/requirements.txt \
