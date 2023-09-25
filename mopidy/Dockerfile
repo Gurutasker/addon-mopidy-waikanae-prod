@@ -31,7 +31,7 @@ RUN \
     \
     && apt-get install -y --no-install-recommends \
         libffi-dev=3.2.1-9 \
-        libxml2-dev=2.9.4+dfsg1-7+deb10u4 \
+        libxml2-dev=2.9.4+dfsg1-7+deb10u6 \
         libxslt1-dev=1.1.32-2.2~deb10u2 \
         libasound2-dev=1.1.8-1 \
         libspotify12=12.1.51-1 \
